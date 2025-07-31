@@ -98,7 +98,7 @@ fun MealUi(
                 }
             }
         } else {
-            error?.getMessage()?.let { errorMessage ->
+            error?.let { errorMessage ->
                 Box(
                     modifier = modifier
                         .padding(horizontal = 16.dp)
@@ -106,7 +106,7 @@ fun MealUi(
                         .align(Alignment.CenterHorizontally)
                 ) {
                     Text(
-                        text = errorMessage,
+                        text = errorMessage.getMessage(),
                         modifier = modifier.align(Alignment.Center),
                         style = MaterialTheme.typography.bodyMedium
                     )
